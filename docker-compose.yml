@@ -1,9 +1,9 @@
 services:
   app:
     build: .
-    image: profrafaelmiranda/mural-flask:latest
+    image: https://hub.docker.com/u/vitorbernardo2
     ports:
-      - "8081:5000"
+      - "SUA_PORTA:5000"
     environment:
       DB_HOST: db
       DB_PORT: "3306"
@@ -27,6 +27,5 @@ services:
 
 volumes:
   dados_mariadb:
-
 
 
