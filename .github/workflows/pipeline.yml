@@ -62,7 +62,7 @@ jobs:
         run: |
           for i in $(seq 1 40); do
             if curl --fail --silent --output /dev/null \
-              http://localhost:8081/; then
+              http://localhost:8095/; then
               echo "Aplicacao respondeu com sucesso!"
               exit 0
             fi
@@ -81,7 +81,6 @@ jobs:
         run: docker compose down -v
 
   # 3. DEPLOY NO AZURE
-  
   deploy:
     needs: test
     runs-on: ubuntu-latest
